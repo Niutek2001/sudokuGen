@@ -665,6 +665,7 @@ function generate() {
 		cycle++;
 	}while(checkArray.includes(undefined));
 	document.getElementById("overlay").style.zIndex = -5;
+	document.getElementById("result").style.zIndex = -5;
 	document.getElementById("menu").style.zIndex = 5;
 	setTimeout(fill, 500);
 	timerStart();
@@ -672,7 +673,7 @@ function generate() {
 }
 
 function check() {
-	document.getElementById("result").innerHTML = "Time: " + hr + ": " + min + " :" + sec + "<button onclick=generate() class=buttonStart id=buttonStart>Retry</button>";
+	document.getElementById("result").innerHTML = "Time: " + hr + ":" + min + ":" + sec + "<button onclick=generate() class=buttonStart id=buttonStart>Retry</button>";
 	document.getElementById("menu").style.zIndex = -5;
 	document.getElementById("result").style.zIndex = 5;
 	stopInterval();
@@ -683,7 +684,7 @@ function timerStart() {
 	min = 0;
 	hr = 0;
 	document.getElementById("ss").innerHTML = sec;
-	document.getElementById("mm").innerHTML = ": " + min + " :" ;
+	document.getElementById("mm").innerHTML = ":" + min + ":" ;
 	document.getElementById("hh").innerHTML = hr;
 	interval = setInterval(timer, 1000);
 }
