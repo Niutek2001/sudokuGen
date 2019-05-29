@@ -1,5 +1,5 @@
 var id;
-var check = [];
+var checkArray = [];
 var ax = [];
 var ay = [];
 var az = [];
