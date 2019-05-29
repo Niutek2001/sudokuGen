@@ -672,7 +672,7 @@ function generate() {
 }
 
 function check() {
-	document.getElementById("result").innerHTML = "Twój czas: " + hr + ": " + min + " :" + sec;
+	//document.getElementById("result").innerHTML = "Twój czas: " + hr + ": " + min + " :" + sec;
 	document.getElementById("result").style.zIndex = 5;
 	stopInterval();
 }
