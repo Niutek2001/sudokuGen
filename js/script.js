@@ -668,6 +668,7 @@ function generate() {
 	document.getElementById("menu").style.zIndex = 5;
 	setTimeout(fill, 500);
 	timerStart();
+        console.log(cycle);
 }
 
 function check() {
