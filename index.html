@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset=utf-8>
+		<link rel="stylesheet" type="text/css" href="style/style.css" />
+		<script src="js/script.js"></script>
+		<title>SUDOKU</title>
+	</head>
+	<body>
+		<div id=box>
+					<div id=playArea>
+						<div id=overlay>
+							<div id=logo>SUDOKU</div>
+							<button onclick=generate() class=buttonStart id=buttonStart>Start</button>
+							<div id=footer>©2019 Paweł Gawryszewski, Piotr Czarnecki</div>
+						</div>
+							<div id=Box1 class=playBox>
+								<input type="text" class=input id=A1 pattern="[1-9]">
+								<input type="text" class=input id=A2 pattern="[1-9]">
+								<input type="text" class=input id=A3 pattern="[1-9]">
+								<input type="text" class=input id=B1 pattern="[1-9]">
+								<input type="text" class=input id=B2 pattern="[1-9]">
+								<input type="text" class=input id=B3 pattern="[1-9]">
+								<input type="text" class=input id=C1 pattern="[1-9]">
+								<input type="text" class=input id=C2 pattern="[1-9]">
+								<input type="text" class=input id=C3 pattern="[1-9]">
+							</div>
+							<div id=Box2 class=playBox>
+								<input type="text" class=input id=A4 pattern="[1-9]">
+								<input type="text" class=input id=A5 pattern="[1-9]">
+								<input type="text" class=input id=A6 pattern="[1-9]">
+								<input type="text" class=input id=B4 pattern="[1-9]">
+								<input type="text" class=input id=B5 pattern="[1-9]">
+								<input type="text" class=input id=B6 pattern="[1-9]">
+								<input type="text" class=input id=C4 pattern="[1-9]">
+								<input type="text" class=input id=C5 pattern="[1-9]">
+								<input type="text" class=input id=C6 pattern="[1-9]">
+							</div>
+							<div id=Box3 class=playBox>
+								<input type="text" class=input id=A7 pattern="[1-9]">
+								<input type="text" class=input id=A8 pattern="[1-9]">
+								<input type="text" class=input id=A9 pattern="[1-9]">
+								<input type="text" class=input id=B7 pattern="[1-9]">
+								<input type="text" class=input id=B8 pattern="[1-9]">
+								<input type="text" class=input id=B9 pattern="[1-9]">
+								<input type="text" class=input id=C7 pattern="[1-9]">
+								<input type="text" class=input id=C8 pattern="[1-9]">
+								<input type="text" class=input id=C9 pattern="[1-9]">
+							</div>
+							<div id=Box4 class=playBox>
+								<input type="text" class=input id=D1 pattern="[1-9]">
+								<input type="text" class=input id=D2 pattern="[1-9]">
+								<input type="text" class=input id=D3 pattern="[1-9]">
+								<input type="text" class=input id=E1 pattern="[1-9]">
+								<input type="text" class=input id=E2 pattern="[1-9]">
+								<input type="text" class=input id=E3 pattern="[1-9]">
+								<input type="text" class=input id=F1 pattern="[1-9]">
+								<input type="text" class=input id=F2 pattern="[1-9]">
+								<input type="text" class=input id=F3 pattern="[1-9]">
+							</div>
+							<div id=Box5 class=playBox>
+								<input type="text" class=input id=D4 pattern="[1-9]">
+								<input type="text" class=input id=D5 pattern="[1-9]">
+								<input type="text" class=input id=D6 pattern="[1-9]">
+								<input type="text" class=input id=E4 pattern="[1-9]">
+								<input type="text" class=input id=E5 pattern="[1-9]">
+								<input type="text" class=input id=E6 pattern="[1-9]">
+								<input type="text" class=input id=F4 pattern="[1-9]">
+								<input type="text" class=input id=F5 pattern="[1-9]">
+								<input type="text" class=input id=F6 pattern="[1-9]">
+							</div>
+							<div id=Box6 class=playBox>
+								<input type="text" class=input id=D7 pattern="[1-9]">
+								<input type="text" class=input id=D8 pattern="[1-9]">
+								<input type="text" class=input id=D9 pattern="[1-9]">
+								<input type="text" class=input id=E7 pattern="[1-9]">
+								<input type="text" class=input id=E8 pattern="[1-9]">
+								<input type="text" class=input id=E9 pattern="[1-9]">
+								<input type="text" class=input id=F7 pattern="[1-9]">
+								<input type="text" class=input id=F8 pattern="[1-9]">
+								<input type="text" class=input id=F9 pattern="[1-9]">
+							</div>
+							<div id=Box7 class=playBox>
+								<input type="text" class=input id=G1 pattern="[1-9]">
+								<input type="text" class=input id=G2 pattern="[1-9]">
+								<input type="text" class=input id=G3 pattern="[1-9]">
+								<input type="text" class=input id=H1 pattern="[1-9]">
+								<input type="text" class=input id=H2 pattern="[1-9]">
+								<input type="text" class=input id=H3 pattern="[1-9]">
+								<input type="text" class=input id=I1 pattern="[1-9]">
+								<input type="text" class=input id=I2 pattern="[1-9]">
+								<input type="text" class=input id=I3 pattern="[1-9]">
+							</div>
+							<div id=Box8 class=playBox>
+								<input type="text" class=input id=G4 pattern="[1-9]">
+								<input type="text" class=input id=G5 pattern="[1-9]">
+								<input type="text" class=input id=G6 pattern="[1-9]">
+								<input type="text" class=input id=H4 pattern="[1-9]">
+								<input type="text" class=input id=H5 pattern="[1-9]">
+								<input type="text" class=input id=H6 pattern="[1-9]">
+								<input type="text" class=input id=I4 pattern="[1-9]">
+								<input type="text" class=input id=I5 pattern="[1-9]">
+								<input type="text" class=input id=I6 pattern="[1-9]">
+							</div>
+							<div id=Box9 class=playBox>
+								<input type="text" class=input id=G7 pattern="[1-9]">
+								<input type="text" class=input id=G8 pattern="[1-9]">
+								<input type="text" class=input id=G9 pattern="[1-9]">
+								<input type="text" class=input id=H7 pattern="[1-9]">
+								<input type="text" class=input id=H8 pattern="[1-9]">
+								<input type="text" class=input id=H9 pattern="[1-9]">
+								<input type="text" class=input id=I7 pattern="[1-9]">
+								<input type="text" class=input id=I8 pattern="[1-9]">
+								<input type="text" class=input id=I9 pattern="[1-9]">
+							</div>
+						
+					</div>
+			<div id=menu>
+				<div id=timer>
+					<span id=hh></span>
+					<span id=mm></span>
+					<span id=ss></span>
+				</div>
+				<button onclick=check() class=buttonCheck id=buttonCheck>Check</button>
+			</div>
+		</div>
+	</body>
+</html>

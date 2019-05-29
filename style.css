@@ -1,0 +1,526 @@
+#box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1200px;
+	background-color: #4f4f4f;
+	min-height: 100%;
+	overflow-y: hidden;
+}
+#playArea {
+	position: absolute;
+	width: 664px;
+	height: 664px;
+	top: 26px;
+	left: calc(50% - 332px);
+}
+#overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: +20px;
+	background-color: lightgray;
+	z-index: 5;
+}
+#logo {
+	position: absolute;
+	width: 400px;
+	font-size: 100px;
+	font-family: Arial;
+	font-weight: 700;
+	text-align: center;
+	top: 15px;
+	left: 132px;
+	color: #666666;
+}
+#menu {
+	position: absolute;
+	width: 664px;
+	height: 80px;
+	top: 715px;
+	background-color: lightgray;
+	left: calc(50% - 332px);
+	z-index: -5;
+}
+#timer {
+	position: absolute;
+	width: 360px;
+	height: 70px;
+	top: 5px;
+	left: 20px;
+	text-align: center;
+	color: #666666;
+	font-size: 60px;
+	z-index: 6;
+}
+.buttonStart {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+	background-color:#f9f9f9;
+	-moz-border-radius:16px;
+	-webkit-border-radius:16px;
+	border-radius:16px;
+	border:4px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:32px 76px;
+	text-decoration:none;
+}
+.buttonStart:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+	background-color:#e9e9e9;
+}
+.buttonStart:active {
+	position:relative;
+	top:1px;
+}
+#buttonStart {
+	position: absolute;
+	width: 280px;
+	left: 190px;
+	top: 290px;
+}
+.buttonCheck {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+	background-color:#f9f9f9;
+	-moz-border-radius:16px;
+	-webkit-border-radius:16px;
+	border-radius:16px;
+	border:4px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:20px 50px;
+	text-decoration:none;
+}
+.buttonCheck:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+	background-color:#e9e9e9;
+}
+.buttonCheck:active {
+	position:relative;
+	top:1px;
+}
+#buttonCheck {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+}
+#footer {
+	position: absolute;
+	width: 340px;
+	left: 170px;
+	bottom: 5px;
+	text-align: center;
+	color: #666666;
+}
+.playBox {
+	position: absolute;
+	width: 218px;
+	height: 218px;
+	background-color: lightgray;
+}
+#Box1 {
+	top: 20px;
+	left: calc(50% - 332px);
+}
+#Box2 {
+	top: 20px;
+	left: calc(50% - 109px);
+}
+#Box3 {
+	top: 20px;
+	left: calc(50% + 114px);
+}
+#Box4 {
+	top: 243px;
+	left: calc(50% - 332px);
+}
+#Box5 {
+	top: 243px;
+	left: calc(50% - 109px);
+}
+#Box6 {
+	top: 243px;
+	left: calc(50% + 114px);
+}
+#Box7 {
+	top: 466px;
+	left: calc(50% - 332px);
+}
+#Box8 {
+	top: 466px;
+	left: calc(50% - 109px);
+}
+#Box9 {
+	top: 466px;
+	left: calc(50% + 114px);
+}
+.input {
+	position: absolute;
+	width: 68px;
+	height: 68px;
+	text-align: center;
+	font-size: 50px;
+	font-weight: 800;
+	border: none;
+}
+#A1 {
+	top: 2px;
+	left: 2px;
+}
+#A2 {
+	top: 2px;
+	left: 74px;
+}
+#A3 {
+	top: 2px;
+	left: 146px;
+}
+#A4 {
+	top: 2px;
+	left: 2px;
+}
+#A5 {
+	top: 2px;
+	left: 74px;
+}
+#A6 {
+	top: 2px;
+	left: 146px;
+}
+#A7 {
+	top: 2px;
+	left: 2px;
+}
+#A8 {
+	top: 2px;
+	left: 74px;
+}
+#A9 {
+	top: 2px;
+	left: 146px;
+}
+#B1 {
+	top: 74px;
+	left: 2px;
+}
+#B2 {
+	top: 74px;
+	left: 74px;
+}
+#B3 {
+	top: 74px;
+	left: 146px;
+}
+#B4 {
+	top: 74px;
+	left: 2px;
+}
+#B5 {
+	top: 74px;
+	left: 74px;
+}
+#B6 {
+	top: 74px;
+	left: 146px;
+}
+#B7 {
+	top: 74px;
+	left: 2px;
+}
+#B8 {
+	top: 74px;
+	left: 74px;
+}
+#B9 {
+	top: 74px;
+	left: 146px;
+}
+#C1 {
+	top: 146px;
+	left: 2px;
+}
+#C2 {
+	top: 146px;
+	left: 74px;
+}
+#C3 {
+	top: 146px;
+	left: 146px;
+}
+#C4 {
+	top: 146px;
+	left: 2px;
+}
+#C5 {
+	top: 146px;
+	left: 74px;
+}
+#C6 {
+	top: 146px;
+	left: 146px;
+}
+#C7 {
+	top: 146px;
+	left: 2px;
+}
+#C8 {
+	top: 146px;
+	left: 74px;
+}
+#C9 {
+	top: 146px;
+	left: 146px;
+}
+#D1 {
+	top: 2px;
+	left: 2px;	
+}
+#D2 {
+	top: 2px;
+	left: 74px;
+}
+#D3 {
+	top: 2px;
+	left: 146px;
+}
+#D4 {
+	top: 2px;
+	left: 2px;
+}
+#D5 {
+	top: 2px;
+	left: 74px;
+}
+#D6 {
+	top: 2px;
+	left: 146px;
+}
+#D7 {
+	top: 2px;
+	left: 2px;
+}
+#D8 {
+	top: 2px;
+	left: 74px;
+}
+#D9 {
+	top: 2px;
+	left: 146px;
+}
+
+#E1 {
+	top: 74px;
+	left: 2px;
+	
+}
+#E2 {
+	top: 74px;
+	left: 74px;
+}
+#E3 {
+	top: 74px;
+	left: 146px;
+}
+#E4 {
+	top: 74px;
+	left: 2px;
+}
+#E5 {
+		top: 74px;
+	left: 74px;
+}
+#E6 {
+	top: 74px;
+	left: 146px;
+}
+#E7 {
+	top: 74px;
+	left: 2px;
+}
+#E8 {
+	top: 74px;
+	left: 74px;
+}
+#E9 {
+	top: 74px;
+	left: 146px;
+}
+
+#F1 {
+	top: 146px;
+	left: 2px;
+}
+
+#F2 {
+	top: 146px;
+	left: 74px;
+}
+#F3 {
+	top: 146px;
+	left: 146px;
+}
+#F4 {
+	top: 146px;
+	left: 2px;
+}
+#F5 {
+	top: 146px;
+	left: 74px;
+}
+#F6 {
+	top: 146px;
+	left: 146px;
+}
+#F7 {
+	top: 146px;
+	left: 2px;
+}
+#F8 {
+	top: 146px;
+	left: 74px;
+}
+#F9 {
+	top: 146px;
+	left: 146px;
+}
+#G1 {
+	top: 2px;
+	left: 2px;	
+}
+#G2 {
+	top: 2px;
+	left: 74px;
+}
+#G3 {
+	top: 2px;
+	left: 146px;
+}
+#G4 {
+	top: 2px;
+	left: 2px;
+}
+#G5 {
+	top: 2px;
+	left: 74px;
+}
+#G6 {
+	top: 2px;
+	left: 146px;
+}
+#G7 {
+	top: 2px;
+	left: 2px;
+}
+#G8 {
+	top: 2px;
+	left: 74px;
+}
+#G9 {
+	top: 2px;
+	left: 146px;
+}
+#H1 {
+	top: 74px;
+	left: 2px;
+}
+#H2 {
+	top: 74px;
+	left: 74px;
+}
+#H3 {
+	top: 74px;
+	left: 146px;
+}
+#H4 {
+	top: 74px;
+	left: 2px;
+}
+#H5 {
+	top: 74px;
+	left: 74px;
+}
+#H6 {
+	top: 74px;
+	left: 146px;
+}
+#H7 {
+	top: 74px;
+	left: 2px;
+}
+#H8 {
+	top: 74px;
+	left: 74px;
+}
+#H9 {
+	top: 74px;
+	left: 146px;
+}
+#I1 {
+	top: 146px;
+	left: 2px;
+}
+#I2 {
+	top: 146px;
+	left: 74px;
+}
+#I3 {
+	top: 146px;
+	left: 146px;
+}
+#I4 {
+	top: 146px;
+	left: 2px;
+}
+#I5 {
+	top: 146px;
+	left: 74px;
+}
+#I6 {
+	top: 146px;
+	left: 146px;
+}
+#I7 {
+	top: 146px;
+	left: 2px;
+}
+#I8 {
+	top: 146px;
+	left: 74px;
+}
+#I9 {
+	top: 146px;
+	left: 146px;
+}
