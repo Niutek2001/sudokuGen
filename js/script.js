@@ -672,6 +672,7 @@ function generate() {
 }
 
 function check() {
+	document.getElementById("result").innerHTML = "Twój czas: " hr + ": " + min + " :" + sec;
 	stopInterval();
 }
 
