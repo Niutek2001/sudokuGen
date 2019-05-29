@@ -695,7 +695,7 @@ function timerStop() {
 
 function timer() {
 	document.getElementById("ss").innerHTML = sec;
-	document.getElementById("mm").innerHTML = ": " + min + " :";
+	document.getElementById("mm").innerHTML = ":" + min + ":";
 	document.getElementById("hh").innerHTML = hr;
 	sec++;
 	if (sec == 60) {
