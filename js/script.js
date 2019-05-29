@@ -667,7 +667,7 @@ function generate() {
 	document.getElementById("overlay").style.zIndex = -5;
 	document.getElementById("result").style.zIndex = -5;
 	document.getElementById("menu").style.zIndex = 5;
-	setTimeout(fill, 500);
+	setTimeout(fill, 20);
 	timerStart();
         console.log(cycle);
 }
