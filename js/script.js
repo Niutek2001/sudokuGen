@@ -679,13 +679,41 @@ function generate() {
 
 function check() {
 	timerStop();
-	var id;
 	var n = 1;
 	var l = "A";
 	var Arr = 0;
 	do {
 		checkArray[Arr] = document.getElementById(l + n).value;
-	}while(Arr != 8);
+		Arr++;
+		n++;
+		if(n == 10) {
+			n = 1;
+			if(l == H) {
+				l = "I"
+			}
+			if(l == G) {
+				l = "H"
+			}
+			if(l == F) {
+				l = "G"
+			}
+			if(l == E) {
+				l = "F"
+			}
+			if(l == D) {
+				l = "E"
+			}
+			if(l == C) {
+				l = "D"
+			}
+			if(l == B) {
+				l = "C"
+			}
+			if(l == A) {
+				l = "B"
+			}
+		}
+	}while(Arr != 80);
 	document.getElementById("result").innerHTML = "Time: " + hr + ":" + min + ":" + sec + "<button onclick=generate() class=buttonStart id=buttonStart>Retry</button>";
 	document.getElementById("menu").style.zIndex = -5;
 	document.getElementById("result").style.zIndex = 5;
