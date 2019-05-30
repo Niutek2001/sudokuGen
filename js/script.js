@@ -35,7 +35,7 @@ function arrayRandomize(array) {
   }
   return array;
 }
-function blankSpaces {
+function blankSpaces() {
 	spaces = [ax, ay, az, bx, by, bz, cx, cy, cz];
 	console.log(spaces);
 }
