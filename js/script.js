@@ -665,7 +665,7 @@ function generate() {
 		checkArray = [ay[3], ay[4], ay[5], ay[6], ay[7], ay[8], az[3], az[4], az[5], az[6], az[7], az[8], bx[1], bx[2], bx[4], bx[5], bx[7], bx[8], by[0], by[1], by[2], by[3], by[4], by[5], by[6], by[7], by[8], bz[0], bz[1], bz[2], bz[3], bz[4], bz[5], bz[6], bz[7], bz[8], cx[1], cx[2], cx[4], cx[5], cx[7], cx[8], cy[0], cy[1], cy[2], cy[3], cy[4], cy[5], cy[6], cy[7], cy[8], cz[0], cz[1], cz[2], cz[3], cz[4], cz[5], cz[6], cz[7], cz[8]];
 		cycle++;
 	}while(checkArray.includes(undefined));
-	spaces();
+	spacesArr();
 	spaces = ax.concat(ay,az,bx,by,bz,cx,cy,cz);
 	document.getElementById("overlay").style.zIndex = -5;
 	document.getElementById("result").style.zIndex = -5;
@@ -840,7 +840,7 @@ function fill() {
 	document.getElementById("I9").value = cz[8];
 }
 
-function spaces() {
+function spacesArr() {
 	spaces[0] = ax[0];
 	spaces[1] = ax[1];
 	spaces[2] = ax[2];
