@@ -1,4 +1,3 @@
-var id;
 var checkArray = [];
 var ax = [];
 var ay = [];
@@ -17,6 +16,7 @@ var cz = [];
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var tmpArray = [];
 var tmpArray2 = [];
+var spaces = [];
 
 var interval;
 var sec;
@@ -34,6 +34,10 @@ function arrayRandomize(array) {
     array[randomIndex] = temporaryValue;
   }
   return array;
+}
+function blankSpaces {
+	spaces = [ax, ay, az, bx, by, bz, cx, cy, cz];
+	console.log(spaces);
 }
 
 function arrayRemove(arr, value) {
