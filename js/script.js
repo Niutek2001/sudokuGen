@@ -50,6 +50,8 @@ function arrayRemove(arr, value) {
 }
 
 function generate() {
+	document.getElementById("overlay").style.zIndex = -5;
+	document.getElementById("result").style.zIndex = -5;
 	cycle = 0;
 	do {
 	ax = arrayRandomize(array);
@@ -680,8 +682,6 @@ function generate() {
 		document.getElementById(ids[Arr]).value = "";
 		Arr++;
 	}while(Arr != 81)
-	document.getElementById("overlay").style.zIndex = -5;
-	document.getElementById("result").style.zIndex = -5;
 	document.getElementById("menu").style.zIndex = 5;
 	timerStart();
         console.log(cycle);
