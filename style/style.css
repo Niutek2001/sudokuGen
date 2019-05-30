@@ -80,7 +80,8 @@
 	width: 640px;
 	top: 150px;
 	left: calc(50% - 320px);
-	font-size: 60pt;	
+	font-size: 60pt;
+	color: #00ad00;
 }
 #resultFail {
 	display: inline-block;
@@ -88,7 +89,8 @@
 	width: 640px;
 	top: 150px;
 	left: calc(50% - 320px);
-	font-size: 60pt;	
+	font-size: 60pt;
+	color: #ad0000;
 	
 }
 .buttonStart {
