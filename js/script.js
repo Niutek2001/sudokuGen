@@ -688,28 +688,28 @@ function check() {
 		n++;
 		if(n == 10) {
 			n = 1;
-			if(l == H) {
+			if(l == "H") {
 				l = "I"
 			}
-			if(l == G) {
+			if(l == "G") {
 				l = "H"
 			}
-			if(l == F) {
+			if(l == "F") {
 				l = "G"
 			}
-			if(l == E) {
+			if(l == "E") {
 				l = "F"
 			}
-			if(l == D) {
+			if(l == "D") {
 				l = "E"
 			}
-			if(l == C) {
+			if(l == "C") {
 				l = "D"
 			}
-			if(l == B) {
+			if(l == "B") {
 				l = "C"
 			}
-			if(l == A) {
+			if(l == "A") {
 				l = "B"
 			}
 		}
