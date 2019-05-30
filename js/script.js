@@ -682,6 +682,11 @@ function generate() {
 		document.getElementById(ids[Arr]).value = "";
 		Arr++;
 	}while(Arr != 81)
+	do {
+		Arr = Math.floor(Math.random() * 81); 
+		document.getElementById(ids[Arr]).value = spaces[Arr];
+		i++;
+	}while(i != 35)
 	document.getElementById("menu").style.zIndex = 5;
 	timerStart();
         console.log(cycle);
