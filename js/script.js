@@ -1,4 +1,5 @@
 var checkArray = [];
+var spaces = [];
 var ax = [];
 var ay = [];
 var az = [];
@@ -16,7 +17,7 @@ var cz = [];
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var tmpArray = [];
 var tmpArray2 = [];
-var spaces = [];
+var i = 0;
 
 var interval;
 var sec;
@@ -34,10 +35,6 @@ function arrayRandomize(array) {
     array[randomIndex] = temporaryValue;
   }
   return array;
-}
-function blankSpaces() {
-	spaces = [ax, ay, az, bx, by, bz, cx, cy, cz];
-	console.log(spaces);
 }
 
 function arrayRemove(arr, value) {
@@ -58,7 +55,7 @@ function generate() {
 		tmpArray = arrayRemove(tmpArray, ax[2]);
 		tmpArray = arrayRandomize(tmpArray);
 		ay[0] = tmpArray[0];
-		
+
 			tmpArray = arrayRemove(tmpArray, ay[0]);
 			tmpArray = arrayRandomize(tmpArray);
 			ay[1] = tmpArray[0];
@@ -668,11 +665,11 @@ function generate() {
 		checkArray = [ay[3], ay[4], ay[5], ay[6], ay[7], ay[8], az[3], az[4], az[5], az[6], az[7], az[8], bx[1], bx[2], bx[4], bx[5], bx[7], bx[8], by[0], by[1], by[2], by[3], by[4], by[5], by[6], by[7], by[8], bz[0], bz[1], bz[2], bz[3], bz[4], bz[5], bz[6], bz[7], bz[8], cx[1], cx[2], cx[4], cx[5], cx[7], cx[8], cy[0], cy[1], cy[2], cy[3], cy[4], cy[5], cy[6], cy[7], cy[8], cz[0], cz[1], cz[2], cz[3], cz[4], cz[5], cz[6], cz[7], cz[8]];
 		cycle++;
 	}while(checkArray.includes(undefined));
+	spaces();
 	spaces = ax.concat(ay,az,bx,by,bz,cx,cy,cz);
 	document.getElementById("overlay").style.zIndex = -5;
 	document.getElementById("result").style.zIndex = -5;
 	document.getElementById("menu").style.zIndex = 5;
-	setTimeout(fill, 20);
 	timerStart();
         console.log(cycle);
 }
@@ -713,10 +710,17 @@ function check() {
 				l = "B"
 			}
 		}
-	}while(Arr != 80);
-	document.getElementById("result").innerHTML = "Time: " + hr + ":" + min + ":" + sec + "<button onclick=generate() class=buttonStart id=buttonStart>Retry</button>";
-	document.getElementById("menu").style.zIndex = -5;
-	document.getElementById("result").style.zIndex = 5;
+	}while(Arr != 81)
+	if(checkArray == spaces){
+		document.getElementById("result").innerHTML = "<span id=resultOk>Congratulations</span>" "<span id=timerEnd>Time: " + hr + ":" + min + ":" + sec + "</span><button onclick=generate() class=buttonStart id=buttonStart>Retry</button>";
+		document.getElementById("menu").style.zIndex = -5;
+		document.getElementById("result").style.zIndex = 5;
+	}
+	else if(checkArry != spaces){
+		document.getElementById("result").innerHTML = "<span id=resultFail>You Failed</span>" + "<span id=timerEnd>Time: " + hr + ":" + min + ":" + sec + "</span><button onclick=generate() class=buttonStart id=buttonStart>Retry</button>";
+		document.getElementById("menu").style.zIndex = -5;
+		document.getElementById("result").style.zIndex = 5;
+	}
 }
 
 function timerStart() {
@@ -834,4 +838,88 @@ function fill() {
 	document.getElementById("I7").value = cz[6];
 	document.getElementById("I8").value = cz[7];
 	document.getElementById("I9").value = cz[8];
+}
+
+function spaces() {
+	spaces[0] = ax[0];
+	spaces[1] = ax[1];
+	spaces[2] = ax[2];
+	spaces[3] = ay[0];
+	spaces[4] = ay[1];
+	spaces[5] = ay[2];
+	spaces[6] = az[0];
+	spaces[7] = az[1];
+	spaces[8] = az[2];
+	spaces[9] = ax[3];
+	spaces[10] = ax[4];
+	spaces[11] = ax[5];
+	spaces[12] = ay[3];
+	spaces[13] = ay[4];
+	spaces[14] = ay[5];
+	spaces[15] = az[3];
+	spaces[16] = az[4];
+	spaces[17] = az[5];
+	spaces[18] = ax[6];
+	spaces[19] = ax[7];
+	spaces[20] = ax[8];
+	spaces[21] = ay[6];
+	spaces[22] = ay[7];
+	spaces[23] = ay[8];
+	spaces[24] = az[6];
+	spaces[25] = az[7];
+	spaces[26] = az[8];
+	spaces[27] = bx[0];
+	spaces[28] = bx[1];
+	spaces[29] = bx[2];
+	spaces[30] = by[0];
+	spaces[31] = by[1];
+	spaces[32] = by[2];
+	spaces[33] = bz[0];
+	spaces[34] = bz[1];
+	spaces[35] = bz[2];
+	spaces[36] = bx[3];
+	spaces[37] = bx[4];
+	spaces[38] = bx[5];
+	spaces[39] = by[3];
+	spaces[40] = by[4];
+	spaces[41] = by[5];
+	spaces[42] = bz[3];
+	spaces[43] = bz[4];
+	spaces[44] = bz[5];
+	spaces[45] = bx[6];
+	spaces[46] = bx[7];
+	spaces[47] = bx[8];
+	spaces[48] = by[6];
+	spaces[49] = by[7];
+	spaces[50] = by[8];
+	spaces[51] = bz[6];
+	spaces[52] = bz[7];
+	spaces[53] = bz[8];
+	spaces[54] = cx[0];
+	spaces[55] = cx[1];
+	spaces[56] = cx[2];
+	spaces[57] = cy[0];
+	spaces[58] = cy[1];
+	spaces[59] = cy[2];
+	spaces[60] = cz[0];
+	spaces[61] = cz[1];
+	spaces[62] = cz[2];
+	spaces[63] = cx[3];
+	spaces[64] = cx[4];
+	spaces[65] = cx[5];
+	spaces[66] = cy[3];
+	spaces[67] = cy[4];
+	spaces[68] = cy[5];
+	spaces[69] = cz[3];
+	spaces[70] = cz[4];
+	spaces[71] = cz[5];
+	spaces[72] = cx[6];
+	spaces[73] = cx[7];
+	spaces[74] = cx[8];
+	spaces[75] = cy[6];
+	spaces[76] = cy[7];
+	spaces[77] = cy[8];
+	spaces[78] = cz[6];
+	spaces[79] = cz[7];
+	spaces[80] = cz[8];
 }
