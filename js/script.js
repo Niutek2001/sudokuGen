@@ -694,12 +694,20 @@ function check() {
 		checkArray[Arr] = document.getElementById(ids[Arr]).value;
 		Arr++;
 	}while(Arr != 81)
-	if(checkArray == spaces){
+	Arr = 0;
+	do {
+		var res = true;
+		if(checkArray[Arr] != spaces [Arr]){
+			res = false;
+		}
+		Arr++;
+	}while(Arr != 81)
+	if(res == true){
 		document.getElementById("result").innerHTML = "<span id=resultOk>Congratulations</span><span id=timerEnd>Time: " + hr + ":" + min + ":" + sec + "</span><button onclick=generate() class=buttonStart id=buttonStart>Retry</button>";
 		document.getElementById("menu").style.zIndex = -5;
 		document.getElementById("result").style.zIndex = 5;
 	}
-	else if(checkArray != spaces){
+	else if(res == false){
 		document.getElementById("result").innerHTML = "<span id=resultFail>You Failed</span><span id=timerEnd>Time: " + hr + ":" + min + ":" + sec + "</span><button onclick=generate() class=buttonStart id=buttonStart>Retry</button>";
 		document.getElementById("menu").style.zIndex = -5;
 		document.getElementById("result").style.zIndex = 5;
