@@ -703,12 +703,12 @@ function check() {
 		Arr++;
 	}while(Arr != 81)
 	if(res == true){
-		document.getElementById("result").innerHTML = "<span id=resultOk>Congratulations</span><span id=timerEnd>Time: " + hr + ":" + min + ":" + sec + "</span><button onclick=generate() class=buttonStart id=buttonStart>Retry</button>";
+		document.getElementById("result").innerHTML = "<span id=resultOk>Congratulations</span><span id=timerEnd>Time: " + hr + ":" + min + ":" + sec + "</span><button onclick=generate() class=buttonStart id=buttonStop>Retry</button>";
 		document.getElementById("menu").style.zIndex = -5;
 		document.getElementById("result").style.zIndex = 5;
 	}
 	else if(res == false){
-		document.getElementById("result").innerHTML = "<span id=resultFail>You Failed</span><span id=timerEnd>Time: " + hr + ":" + min + ":" + sec + "</span><button onclick=generate() class=buttonStart id=buttonStart>Retry</button>";
+		document.getElementById("result").innerHTML = "<span id=resultFail>You Failed</span><span id=timerEnd>Time: " + hr + ":" + min + ":" + sec + "</span><button onclick=generate() class=buttonStart id=buttonStop>Retry</button>";
 		document.getElementById("menu").style.zIndex = -5;
 		document.getElementById("result").style.zIndex = 5;
 	}
