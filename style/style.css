@@ -81,7 +81,7 @@
 	left: calc(50% - 260px);
 	font-size: 60pt;	
 }
-resultFail {
+#resultFail {
 	display: inline-block;
 	position: absolute;
 	width: 520px;
