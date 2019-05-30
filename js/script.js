@@ -18,6 +18,7 @@ var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var tmpArray = [];
 var tmpArray2 = [];
 var i = 0;
+var j;
 var n = 1;
 var l = "A";
 var Arr = 0;
@@ -682,11 +683,13 @@ function generate() {
 		document.getElementById(ids[Arr]).value = "";
 		Arr++;
 	}while(Arr != 81)
+		i = 0;
+		j = (Math.floor(Math.random() * 16)) + 40; 
 	do {
 		Arr = Math.floor(Math.random() * 81); 
 		document.getElementById(ids[Arr]).value = spaces[Arr];
 		i++;
-	}while(i != 35)
+	}while(i != j)
 	document.getElementById("menu").style.zIndex = 5;
 	timerStart();
         console.log(cycle);
