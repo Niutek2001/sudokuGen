@@ -716,7 +716,7 @@ function check() {
 		document.getElementById("menu").style.zIndex = -5;
 		document.getElementById("result").style.zIndex = 5;
 	}
-	else if(checkArry != spaces){
+	else if(checkArray != spaces){
 		document.getElementById("result").innerHTML = "<span id=resultFail>You Failed</span><span id=timerEnd>Time: " + hr + ":" + min + ":" + sec + "</span><button onclick=generate() class=buttonStart id=buttonStart>Retry</button>";
 		document.getElementById("menu").style.zIndex = -5;
 		document.getElementById("result").style.zIndex = 5;
