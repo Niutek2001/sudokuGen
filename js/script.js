@@ -682,7 +682,7 @@ function generate() {
 		document.getElementById(ids[Arr]).value = "";
 		document.getElementById(ids[Arr]).disabled = false;
 		document.getElementById(ids[Arr]).style.background = "#ffffff";
-		document.getElementById(ids[Arr]).style.color = "#000000";
+		document.getElementById(ids[Arr]).style.color = "#474747";
 		Arr++;
 	}while(Arr != 81)
 		i = 0;
