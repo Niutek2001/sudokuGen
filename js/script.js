@@ -51,8 +51,6 @@ function arrayRemove(arr, value) {
 }
 
 function generate() {
-	document.getElementById("overlay").style.zIndex = -5;
-	document.getElementById("result").style.zIndex = -5;
 	cycle = 0;
 	do {
 	ax = arrayRandomize(array);
@@ -673,6 +671,7 @@ function generate() {
 		cycle++;
 	}while(checkArray.includes(undefined));
 	fill();
+		checkArray = [];
 		Arr = 0;
 	do {
 		spaces[Arr] = document.getElementById(ids[Arr]).value;
@@ -690,7 +689,6 @@ function generate() {
 		document.getElementById(ids[Arr]).value = spaces[Arr];
 		i++;
 	}while(i != j)
-	document.getElementById("menu").style.zIndex = 5;
 	timerStart();
         console.log(cycle);
 }
@@ -723,6 +721,10 @@ function check() {
 }
 
 function timerStart() {
+	
+	document.getElementById("menu").style.zIndex = 5;
+	document.getElementById("overlay").style.zIndex = -5;
+	document.getElementById("result").style.zIndex = -5;
 	sec = 0;
 	min = 0;
 	hr = 0;
