@@ -680,6 +680,8 @@ function generate() {
 		Arr = 0;
 	do {
 		document.getElementById(ids[Arr]).value = "";
+		document.getElementById(ids[Arr]).style.backgroundColor = #ffffff;
+		document.getElementById(ids[Arr]).style.color = #000000;
 		Arr++;
 	}while(Arr != 81)
 		i = 0;
@@ -687,6 +689,8 @@ function generate() {
 	do {
 		Arr = Math.floor(Math.random() * 81); 
 		document.getElementById(ids[Arr]).value = spaces[Arr];
+		document.getElementById(ids[Arr]).style.backgroundColor = #e0e0e0;
+		document.getElementById(ids[Arr]).style.color = #474747;
 		i++;
 	}while(i != j)
 	timerStart();
@@ -701,8 +705,8 @@ function check() {
 		Arr++;
 	}while(Arr != 81)
 	Arr = 0;
+	var res = true;
 	do {
-		var res = true;
 		if(checkArray[Arr] != spaces [Arr]){
 			res = false;
 		}
