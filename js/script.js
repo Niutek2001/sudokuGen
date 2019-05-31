@@ -680,6 +680,7 @@ function generate() {
 		Arr = 0;
 	do {
 		document.getElementById(ids[Arr]).value = "";
+		document.getElementById(ids[Arr]).disabled = false;
 		document.getElementById(ids[Arr]).style.background = "#ffffff";
 		document.getElementById(ids[Arr]).style.color = "#000000";
 		Arr++;
@@ -688,6 +689,7 @@ function generate() {
 		j = (Math.floor(Math.random() * 16)) + 40; 
 	do {
 		Arr = Math.floor(Math.random() * 81); 
+		document.getElementById(ids[Arr]).disabled = true;
 		document.getElementById(ids[Arr]).value = spaces[Arr];
 		document.getElementById(ids[Arr]).style.background = "#e0e0e0";
 		document.getElementById(ids[Arr]).style.color = "#474747";
